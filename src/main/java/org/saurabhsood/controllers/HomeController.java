@@ -4,6 +4,7 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import org.saurabhsood.models.Currency;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
@@ -36,5 +37,12 @@ public class HomeController {
         System.out.println("User Page Requested");
         model.addAttribute("userName", user.getUserName());
         return "user";
+    }
+
+    @RequestMapping(value = "/currency", method = RequestMethod.POST)
+    public String currency(@Validated Currency currency, Model model) {
+        System.out.println("Currency Page Requested");
+        model.addAttribute("currencyCode", currency.getCurrencyCode());
+        return "currency";
     }
 }
