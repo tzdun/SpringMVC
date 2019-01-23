@@ -23,5 +23,7 @@
     <input type="submit" value="Get currency rate">
 </form>
 
+<p>Index of greeting <a href="index">here</a></p>
+
 </body>
 </html>

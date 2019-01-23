@@ -19,7 +19,7 @@ public class HomeController {
     /**
      * Simply selects the home view to render by returning its name.
      */
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "/aaa", method = RequestMethod.GET)
     public String home(Locale locale, Model model) {
         System.out.println("Home Page Requested, locale = " + locale);
         Date date = new Date();
@@ -44,5 +44,11 @@ public class HomeController {
         System.out.println("Currency Page Requested");
         model.addAttribute("currencyCode", currency.getCurrencyCode());
         return "currency";
+    }
+
+    @RequestMapping(value = "/index", method = RequestMethod.GET)
+    public String index() {
+        System.out.println("Index Page Requested");
+        return "index1";
     }
 }
